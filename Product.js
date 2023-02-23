@@ -41,7 +41,8 @@ function cartReducer(state, action) {
       return state; } 
       const update = [...state]; 
       update.splice(productIndex, 1) 
-      return update default: 
+      return update 
+      default: 
       return state; 
     } }
 function totalReducer(state, action) { if(action.type === 'add') { return state + action.price; } return state - action.price }
