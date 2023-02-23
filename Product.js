@@ -27,10 +27,23 @@ function getTotal(cart) { const total = cart.reduce((totalCost, item) => totalCo
       emoji:'🍦',
       name: 'waterlemon',
       price: '4'
-    },
     }
+    
     ]
-function cartReducer(state, action) { switch(action.type) { case 'add': return [...state, action.product]; case 'remove': const productIndex = state.findIndex(item => item.name === action.product.name); if(productIndex < 0) { return state; } const update = [...state]; update.splice(productIndex, 1) return update default: return state; } }
+function cartReducer(state, action) { 
+  switch(action.type) { 
+    case 'add': 
+    return [...state, action.product]; 
+    case 'remove': 
+    const productIndex = state.findIndex
+    (item => item.name === action.product.name); 
+    if(productIndex < 0) { 
+      return state; } 
+      const update = [...state]; 
+      update.splice(productIndex, 1) 
+      return update default: 
+      return state; 
+    } }
 function totalReducer(state, action) { if(action.type === 'add') { return state + action.price; } return state - action.price }
 export default function Product() {
 //Ստեղծենք մեր առաջին hook-ը հղում անելով  դատարկ մասիվով useState hook-ին, 
