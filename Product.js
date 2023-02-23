@@ -67,16 +67,5 @@ function add(product) { setCart({ product, type: 'add' }); } function remove(pro
         Shopping Cart: {cart.length} total items.
       </div>
 <div>Total: {getTotal(cart)}</div>
-<div>
-{products.map(product=>(
-<div key={product.name}>
 
-      <div className="product"><span role="img" aria-label="ice cream">🍦</span></div>
-      <button onClick={()=>add(product)}>Add</button> 
-       
-      <button onClick={()=> remove(product)}>Remove</button>
-    </div>
-    ))}
-    </div>
-  )
-}
+
