@@ -4,7 +4,7 @@ import React from 'react';
 import Product from './Product';
 
 
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
@@ -21,11 +21,11 @@ return (
 <BrowserRouter> 
 <Routes> 
 
-<Route index element={<Home />} /> 
+<Route index element={<Product />} /> 
 <Route path="header" element={<Header />} /> 
 <Route path="footer" element={<Footer />} /> 
 
-</Route> 
+
 </Routes> 
 </BrowserRouter> 
 ); }
