@@ -73,7 +73,7 @@ function add(product) { setCart({ product, type: 'add' }); } function remove(pro
 
       <div className="product"><span role="img" aria-label="ice cream">🍦</span></div>
       <button onClick={()=>add(product)}>Add</button> 
-      //Ստեղծենք ֆունկցիա արժեքը ջնջելու համար     նշելով զամբյուղի արժեքը 0
+       
       <button onClick={()=> remove(product)}>Remove</button>
     </div>
     ))}
