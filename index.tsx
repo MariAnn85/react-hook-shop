@@ -1,17 +1,12 @@
 import * as React from 'react';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-
 import App from './App';
-
 import React from "react";
 import ReactDOM from "react-dom";
 import "style.css";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Route, BrowserRouter as Router} from "react-router-dom";
 import App from "./App";
-
-
-
 import Header from "./header";
 import Footer from "./footer";
 
@@ -24,21 +19,18 @@ root.render(
   </StrictMode>
 );
 
+export default function App() { 
+return ( 
+<BrowserRouter> 
+<Routes> 
 
+<Route index element={<Home />} /> 
+<Route path="header" element={<Header />} /> 
+<Route path="footer" element={<Footer />} /> 
 
+</Route> 
+</Routes> 
+</BrowserRouter> 
+); }
 
-const routing = (
-  <Router>
-    <div>
-      <Header />
-      <hr />
-      <Switch>
-        <Route exact path="/" component={App} />
-      
-      </Switch>
-      <Footer />
-    </div>
-  </Router>
-);
-
-ReactDOM.render(routing, document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root')); root.render(<App />);
