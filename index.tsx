@@ -34,9 +34,7 @@ const routing = (
       <hr />
       <Switch>
         <Route exact path="/" component={App} />
-        <Route path="/users" component={Users} />
-        <Route path="/contact" component={Contact} />
-        <Route component={Notfound} />
+      
       </Switch>
       <Footer />
     </div>
