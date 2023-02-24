@@ -13,16 +13,7 @@ function getTotal(cart) { const total = cart.reduce((totalCost, item) => totalCo
 
   //
   const products = [
-    {
-      emoji:'🍦',
-      name: 'ice cream',
-      price: '5'
-    },
-{
-      emoji:'🍨',
-      name: 'ice cream',
-      price: '2.5'
-    },
+   
     {
       emoji:'🎂',
       name: 'donuts',
@@ -52,7 +43,18 @@ function getTotal(cart) { const total = cart.reduce((totalCost, item) => totalCo
       emoji:'🍋',
       name: 'lemon',
       price: '4'
+    },
+ {
+      emoji:'🍦',
+      name: 'ice cream',
+      price: '5'
+    },
+{
+      emoji:'🍨',
+      name: 'ice cream',
+      price: '2.5'
     }
+
    
     ]
 function cartReducer(state, action) { 
