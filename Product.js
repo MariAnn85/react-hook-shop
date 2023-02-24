@@ -44,7 +44,7 @@ function getTotal(cart) { const total = cart.reduce((totalCost, item) => totalCo
       price: '4'
     },
 {
-      emoji:'🍔'
+      emoji:'🍔',
       name: 'burger',
       price: '4'
     },
